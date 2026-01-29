@@ -1,0 +1,35 @@
+# .dockerignore
+
+# This file tells the Docker daemon which files and directories to ignore
+# when building the image. This keeps the build context small and the
+# final image lean.
+
+# Ignore the Dockerfile itself and the git repository
+Dockerfile
+.dockerignore
+.git
+.gitignore
+
+# Ignore the Python virtual environment
+venv/
+/venv/
+
+# Ignore Python cache files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore IDE and editor configuration files
+.vscode/
+.idea/
+
+# Ignore generated artifacts that we will create *inside* the container.
+# We don't want to copy our local versions of these.
+corpus.db
+models/
+
+# Ignore documentation and OS-specific files
+README.md
+.DS_Store
+Thumbs.db
